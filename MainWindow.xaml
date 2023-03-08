@@ -1,13 +1,34 @@
-﻿<Window x:Class="SpotyLi.MainWindow"
+﻿<Page x:Class="SpotyLi.MainPage"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SpotyLi"
         mc:Ignorable="d"
-        Title="SpotyLi" Height="450" Width="800">
+        Height="auto"
+        Width="auto"
+        WindowTitle="SpotyLi"
+        Title="SpotyLi"
+        ShowsNavigationUI="False"
+        >
     <Grid>
-        <Button Content="Ручная смена рабочего стола" HorizontalAlignment="Left" Margin="113,41,0,0" VerticalAlignment="Top" Click="ManualChanger_Click"/>
-        <Frame Name="MainFrame" NavigationUIVisibility="Hidden" ></Frame>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Navigation Panel -->
+        <StackPanel Grid.Column="0" Background="#333333">
+            <StackPanel.Resources>
+                <!-- Style for Navigation Buttons -->
+            </StackPanel.Resources>
+
+            <!-- Navigation Buttons -->
+            <Button Content="Profiles" Style="{StaticResource MButton}"/>
+            <Button Content="Manual Mode" Style="{StaticResource MButton}" Click="ManualChanger_Click"/>
+            <Button Content="Automatic Mode" Style="{StaticResource MButton}"/>
+            <Button Content="Settings" Style="{StaticResource MButton}"/>
+        </StackPanel>
     </Grid>
-</Window>
+</Page>

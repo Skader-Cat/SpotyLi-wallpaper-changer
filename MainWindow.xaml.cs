@@ -17,16 +17,16 @@ namespace SpotyLi
     /// <summary>
     /// Логика взаимодействия для Window1.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainPage : Page
     {
-        public MainWindow()
+        public MainPage()
         {
             InitializeComponent();
         }
 
         private void ManualChanger_Click(object sender, RoutedEventArgs e)
         {
-            MainFrame.Content = new ManualChanger();
+            this.NavigationService.Navigate(new Uri("ManualChanger.xaml", UriKind.Relative));
         }
     }
 }

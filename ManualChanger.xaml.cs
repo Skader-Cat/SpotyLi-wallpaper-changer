@@ -48,10 +48,13 @@ namespace SpotyLi
                 if (Regex.IsMatch(Path.GetExtension(obj), @"(jpg|jpeg|png|gif)$"))
                 {
                     files.Add(obj);
-                    fileName.Text = files[0];
+                    fileInfoText.Text = $"Информация о загруженном файле: \nФайл {obj} успешно загружен.";
+                }
+                else
+                {
+                    fileInfoText.Text = "Не удалось загрузить файл, так как он не является изображением.";
                 }
             }
-            fileName.Text = $"{Path.GetFileName(files[0])} \nуспешно загружен";
             image_view_Loaded();
         }
         
@@ -60,7 +63,7 @@ namespace SpotyLi
             BitmapImage img = new BitmapImage(new Uri(files[0]));
             image_view.Source = img;
         }
-        /*
+        
         private async void setImage_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -102,7 +105,7 @@ namespace SpotyLi
                 MessageBox.Show("Обои не установлены на рабочий стол", "Ошибка");
             }
         }
-        */
+        
     }
 }
 
