@@ -64,7 +64,7 @@ namespace SpotyLi
             image_view.Source = img;
         }
         
-        private async void setImage_Click(object sender, RoutedEventArgs e)
+        private async void setImageLockScreen_Click(object sender, RoutedEventArgs e)
         {
             try
             {

@@ -26,7 +26,9 @@ namespace SpotyLi
 
         private void ManualChanger_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("ManualChanger.xaml", UriKind.Relative));
+            this.NavigationService.Navigate(new Uri("View/ManualChanger.xaml", UriKind.Relative));
+            
+            
         }
     }
 }

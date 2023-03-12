@@ -73,8 +73,8 @@
             </Border>
 
             <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="-20">
-                <Button x:Name="setImage_LockScreen" Margin="10" Content="LockScreen" Style="{StaticResource MButton}"/>
-                <Button x:Name="setImage_Desktop" Margin="10" Content="DesktopScreen" Style="{StaticResource MButton}"/>
+                <Button x:Name="setImage_LockScreen" Margin="10" Content="LockScreen" Style="{StaticResource MButton}" Click="setImageLockScreen_Click"/>
+                <Button x:Name="setImage_Desktop" Margin="10" Content="DesktopScreen" Style="{StaticResource MButton}" Click="setImageDesktop_Click"/>
             </StackPanel>
         </Grid>
 
